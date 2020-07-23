@@ -4,6 +4,7 @@ const hbs = require('hbs')
 const ongkir = require('../utils/rajaongkir.js')
 
 const app = express()
+const port = process.env.PORT || 3000
 const publicDirPath = path.join(__dirname,'../public')
 //const viewsPath = path.join(__dirname, '../templates')
 
@@ -28,7 +29,7 @@ app.get('/portofolio', (req, res) => {
 app.get('/rajaongkir', (req, res) => { 
     if (!req.query.id){
         return res.send({
-            error: 'you must provide id'
+            error: 'you must provide id' +port
         })
     }
 

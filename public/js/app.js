@@ -6,7 +6,7 @@ form.addEventListener('submit',(e) => {
     e.preventDefault()
     const id = search.value
 
-    fetch('http://localhost:3000/rajaongkir?id=' + id).then((response)=>{
+    fetch('/rajaongkir?id=' + id).then((response)=>{
     response.json().then((data)=>{
             if(data.error){
                 messageOne.textContent = data.error
