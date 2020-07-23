@@ -5,6 +5,7 @@ const messageTwo = document.querySelector('#message-2')
 form.addEventListener('submit',(e) => {
     e.preventDefault()
     const id = search.value
+    messageOne.textContent = "loading...."
 
     fetch('/rajaongkir?id=' + id).then((response)=>{
     response.json().then((data)=>{

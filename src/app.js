@@ -29,7 +29,7 @@ app.get('/portofolio', (req, res) => {
 app.get('/rajaongkir', (req, res) => { 
     if (!req.query.id){
         return res.send({
-            error: 'you must provide id' +port
+            error: 'you must provide id'
         })
     }
 
