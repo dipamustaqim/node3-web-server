@@ -6,10 +6,10 @@ const ongkir = require('../utils/rajaongkir.js')
 const app = express()
 const port = process.env.PORT || 3000
 const publicDirPath = path.join(__dirname,'../public')
-//const viewsPath = path.join(__dirname, '../templates')
+const viewsPath = path.join(__dirname, '../src/views')
 
 app.set('view engine','hbs')
-//app.set('views', viewsPath)
+app.set('views', viewsPath)
 app.use(express.static(publicDirPath))
 
 app.get('', (req, res) => {
@@ -40,5 +40,5 @@ app.get('/rajaongkir', (req, res) => {
 
 
 app.listen(port,() =>{
-    console.log('server is up on port ' +port)
+    console.log('server is up on port ' + port)
 })
